@@ -1,0 +1,2 @@
+Descripción del proyecto
+El proyecto consiste en el desarrollo de un sistema de gestión de citas médicas que lleva por nombre GECIME (Gestión de Citas Médicas) para la clínica de la Universidad Tecnológica de Emiliano Zapata (UTEZ). Este sistema tiene como finalidad modernizar y optimizar el proceso actual de asignación, control y seguimiento de citas médicas, a fin de mejorar la eficiencia operativa y la calidad del servicio ofrecido tanto al personal como a los pacientes.

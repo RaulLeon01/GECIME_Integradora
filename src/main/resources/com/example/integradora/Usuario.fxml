@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/perfilUsuario.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.integradora.UsuarioController">
+
+    <!-- Top bar -->
+    <top>
+        <Label alignment="CENTER" maxWidth="Infinity" prefHeight="80" styleClass="header-label" text="SISTEMA GESTOR DE CITAS MÉDICAS | GECIME" />
+    </top>
+
+    <!-- Main Content -->
+    <center>
+        <HBox alignment="TOP_LEFT" fillHeight="true" spacing="0" stylesheets="@../styles/perfilUsuario.css">
+
+            <!-- Menú lateral -->
+            <VBox prefWidth="160" spacing="10" styleClass="side-menu-original">
+                <padding>
+                    <Insets bottom="20" left="15" right="15" top="30" />
+                </padding>
+                <Button fx:id="btnPerfil" onAction="#irAVistaPerfil" styleClass="menu-button-original" text="Perfil" />
+                <Button fx:id="btnAgendar" onAction="#irAVistaAgendar" styleClass="menu-button-original" text="Agendar" />
+                <Button fx:id="btnAgendadas" onAction="#irAVistaAgendadas" styleClass="menu-button-original" text="Agendadas" />
+                <Button fx:id="btnHistorial" onAction="#irAVistaHistorial" styleClass="menu-button-original" text="Historial" />
+                <Pane prefHeight="200.0" prefWidth="200.0" />
+                <Button fx:id="btnCerrarSesion" onAction="#cerrarSesion" styleClass="logout-button" text="Cerrar sesión" />
+                <!-- onAction="#cerrarSesion" cuando ya este la opcion -->
+            </VBox>
+
+            <!-- Contenido centrado horizontalmente -->
+            <StackPane HBox.hgrow="ALWAYS">
+                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="scroll-pane">
+                    <StackPane alignment="TOP_CENTER">
+                        <VBox alignment="TOP_CENTER" maxWidth="800" spacing="20" styleClass="content-box">
+                            <padding>
+                                <Insets bottom="30" left="30" right="30" top="30" />
+                            </padding>
+
+                            <!-- Sección perfil usuario -->
+                            <HBox alignment="CENTER_LEFT" spacing="20" styleClass="profile-container">
+                                <ImageView fitHeight="120" fitWidth="120" preserveRatio="true" styleClass="profile-image">
+                                    <image>
+                                        <Image url="@image3.png" />
+                                    </image>
+                                </ImageView>
+
+                                <VBox alignment="CENTER_LEFT" spacing="8" styleClass="profile-info-original">
+                                    <Label fx:id="nombreLabel" styleClass="profile-name" text="Nombre" />
+                                    <Label fx:id="matriculaLabel" styleClass="profile-detail" text="Matrícula" />
+                                </VBox>
+                            </HBox>
+
+                            <!-- Título sección -->
+                            <Label styleClass="section-title-original" text="Información del paciente" />
+
+                            <!-- Información paciente -->
+                            <GridPane hgap="20" styleClass="info-grid-original" vgap="15">
+                                <padding>
+                                    <Insets bottom="10" left="10" right="10" top="10" />
+                                </padding>
+
+                                <Label styleClass="info-label-original" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label fx:id="emailLabel" styleClass="info-value" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                                <Label styleClass="info-label-original" text="CURP:" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <Label fx:id="curpLabel" styleClass="info-value" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                <Label styleClass="info-label-original" text="Tipo usuario:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                                <Label fx:id="tipoLabel" styleClass="info-value" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+                                <Label styleClass="info-label-original" text="Teléfono emergencia:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                <Label fx:id="telefonoEmergenciaLabel" styleClass="info-value" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+                                <Label styleClass="info-label-original" text="Teléfono:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <Label fx:id="telefonoLabel" styleClass="info-value" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+
+
+                                <columnConstraints>
+                                    <ColumnConstraints />
+                                    <ColumnConstraints />
+                                    <ColumnConstraints />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                </rowConstraints>
+                            </GridPane>
+                        </VBox>
+                    </StackPane>
+                </ScrollPane>
+            </StackPane>
+        </HBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/forms.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.integradora.RecuperarController">
+
+    <!-- Top bar -->
+    <top>
+        <Label alignment="CENTER" maxWidth="Infinity" prefHeight="80" styleClass="header-label" text="SISTEMA GESTOR DE CITAS MÉDICAS | GECIME" />
+    </top>
+
+    <!-- Center content -->
+    <center>
+        <VBox alignment="CENTER" styleClass="spaced-container padded-container" stylesheets="@../styles/forms.css">
+            <Label styleClass="title-label" text="Recuperar Contraseña" />
+            <Label styleClass="subtitle-label" text="Ingrese su correo electrónico" />
+
+            <VBox alignment="CENTER" spacing="15" styleClass="form-container">
+                <TextField fx:id="correoField" promptText="Correo electrónico" styleClass="form-textfield" />
+
+                <HBox alignment="CENTER" spacing="20">
+                    <Button onAction="#onVolverClick" styleClass="cancel-button" text="Regresar" />
+                    <Button onAction="#onEnviarTokenClick" styleClass="primary-button" text="Enviar" />
+                </HBox>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

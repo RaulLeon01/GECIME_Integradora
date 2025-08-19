@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/forms.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.integradora.RegistrarDoctoresController">
+
+    <top>
+        <Label alignment="CENTER" maxWidth="Infinity" prefHeight="80" styleClass="header-label" text="SISTEMA GESTOR DE CITAS MÉDICAS | GECIME" />
+    </top>
+
+    <center>
+        <VBox alignment="TOP_CENTER" styleClass="spaced-container padded-container">
+            <Label styleClass="title-label" text="Registrar médico" />
+
+            <GridPane prefHeight="332.0" prefWidth="1280.0" styleClass="form-grid">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" prefWidth="180" />
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="220" />
+                    <ColumnConstraints halignment="RIGHT" prefWidth="180" />
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="220" />
+                </columnConstraints>
+
+                <!-- 9 filas (0..8) -->
+                <rowConstraints>
+                    <RowConstraints prefHeight="40" vgrow="SOMETIMES" />
+                    <RowConstraints prefHeight="40" vgrow="SOMETIMES" />
+                    <RowConstraints prefHeight="40" vgrow="SOMETIMES" />
+                    <RowConstraints prefHeight="40" vgrow="SOMETIMES" />
+                    <RowConstraints prefHeight="40" vgrow="SOMETIMES" />
+                    <RowConstraints prefHeight="40" vgrow="SOMETIMES" />
+                    <RowConstraints prefHeight="40" vgrow="SOMETIMES" /> <!-- Hora inicio -->
+                    <RowConstraints prefHeight="40" vgrow="SOMETIMES" /> <!-- Hora fin -->
+                    <RowConstraints prefHeight="60" vgrow="SOMETIMES" /> <!-- Botones -->
+                </rowConstraints>
+
+                <!-- Primera columna -->
+                <Label styleClass="form-label" text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="campoNombre" promptText="Diego" styleClass="form-textfield" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label styleClass="form-label" text="Apellidos:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="campoApellidos" promptText="Sanchez" styleClass="form-textfield" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label styleClass="form-label" text="Cedula:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="campoMatricula" promptText="10008" styleClass="form-textfield" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label styleClass="form-label" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <TextField fx:id="campoEmail" promptText="10008@utez.edu.mx" styleClass="form-textfield" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label styleClass="form-label" text="Área:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <TextField fx:id="campoArea" promptText="General" styleClass="form-textfield" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <Label styleClass="form-label" text="CURP:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <TextField fx:id="campoCurp" promptText="DIGO010825HMSSRSA6" styleClass="form-textfield" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <!-- Segunda columna -->
+                <Label styleClass="form-label" text="Teléfono:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <TextField fx:id="campoTelefono" promptText="7775554477" styleClass="form-textfield" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+                <!-- (Se eliminó la fila de fecha de nacimiento) -->
+
+                <Label styleClass="form-label" text="Consultorio:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <ComboBox fx:id="comboConsultorio" promptText="Seleccione consultorio" styleClass="form-textfield" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                <Label styleClass="form-label" text="Contraseña:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <PasswordField fx:id="campoContrasena" promptText="Minimo 8 Caracteres" styleClass="form-textfield" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+                <Label styleClass="form-label" text="Confirmar contraseña:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <PasswordField fx:id="campoConfirmar" promptText="Minimo 8 Caracteres" styleClass="form-textfield" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+                <!-- Horario -->
+                <Label styleClass="form-label" text="Hora inicio:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <ComboBox fx:id="comboHoraInicio" promptText="HH:mm" styleClass="form-textfield" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+
+                <Label styleClass="form-label" text="Hora fin:" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <ComboBox fx:id="comboHoraFin" promptText="HH:mm" styleClass="form-textfield" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+
+                <!-- Botones -->
+                <HBox alignment="CENTER" spacing="20" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="8" />
+            </GridPane>
+            <HBox alignment="CENTER" spacing="20">
+                <Button alignment="CENTER" contentDisplay="CENTER" onAction="#regresar" styleClass="cancel-button" text="Regresar" textAlignment="CENTER" />
+                <Button alignment="CENTER" onAction="#registrarDoctor" styleClass="primary-button" text="Registrar" />
+            </HBox>
+
+        </VBox>
+    </center>
+</BorderPane>

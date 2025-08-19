@@ -1,0 +1,257 @@
+/* Colores principales */
+.root {
+    -primary-color: #2F4F76;
+    -secondary-color: #4CB5A4;
+    -accent-color: #3A7CA5;
+    -light-gray: #F5F5F5;
+    -dark-gray: #333333;
+    -error-color: #D32F2F;
+    -success-color: #388E3C;
+}
+
+/* Estilos generales */
+.main-container {
+    -fx-padding: 30 20 40 20;
+    -fx-background-color: white;
+}
+
+/* Encabezado */
+.header-label {
+    -fx-background-color: -primary-color;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 20;
+    -fx-alignment: center;
+    -fx-max-width: Infinity;
+}
+
+/* Títulos */
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -primary-color;
+}
+
+.subtitle-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: -dark-gray;
+}
+
+/* Formulario */
+.form-container {
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-background-color: -light-gray;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 3);
+}
+
+.form-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: -dark-gray;
+    -fx-font-weight: bold;
+}
+
+.form-textfield {
+    -fx-pref-height: 35;
+    -fx-min-width: 250;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1;
+    -fx-padding: 5 10 5 10;
+}
+
+.form-textfield:focused {
+    -fx-border-color: -accent-color;
+    -fx-border-width: 1.5;
+}
+
+/* GridPane para formularios */
+.form-grid {
+    -fx-hgap: 15;
+    -fx-vgap: 10;
+    -fx-padding: 10 20 20 20;
+}
+
+/* Botones */
+.primary-button {
+    -fx-background-color: -secondary-color;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 30 10 30;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-pref-width: 120;
+    -fx-pref-height: 35;
+}
+
+.primary-button:hover {
+    -fx-background-color: #3CA492;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #2D8C7A;
+}
+
+.secondary-button {
+    -fx-background-color: -primary-color;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-pref-width: 120;
+    -fx-pref-height: 35;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #1E3F6F;
+}
+
+.cancel-button {
+    -fx-background-color: -error-color;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-pref-width: 120;
+    -fx-pref-height: 35;
+}
+
+.cancel-button:hover {
+    -fx-background-color: #C12727;
+}
+
+/* Contenedores */
+.padded-container {
+    -fx-padding: 30;
+}
+
+.spaced-container {
+    -fx-spacing: 20;
+}
+
+/* Hipervínculos */
+.hyperlink {
+    -fx-text-fill: -accent-color;
+    -fx-font-size: 13px;
+    -fx-underline: false;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: -primary-color;
+    -fx-underline: true;
+}
+
+/* Texto secundario */
+.secondary-text {
+    -fx-text-fill: -dark-gray;
+    -fx-font-size: 13px;
+}
+
+/* Estilo para valores de formulario */
+.form-value {
+    -fx-font-size: 14px;
+    -fx-text-fill: -dark-gray;
+    -fx-padding: 5 10 5 10;
+    -fx-background-color: -light-gray;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1;
+    -fx-min-width: 250;
+    -fx-pref-height: 35;
+}
+
+/* Estilo para áreas de texto */
+.form-textarea {
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1;
+    -fx-padding: 5 10 5 10;
+    -fx-min-width: 250;
+    -fx-pref-height: 80;
+}
+
+.form-textarea:focused {
+    -fx-border-color: -accent-color;
+    -fx-border-width: 1.5;
+}
+
+/* Estilo para GridPane de dos columnas */
+.double-column-grid {
+    -fx-hgap: 15;
+    -fx-vgap: 10;
+    -fx-padding: 10 20 20 20;
+}
+
+.double-column-grid .column-constraints {
+    -fx-hgrow: PRIORITY;
+}
+
+/* Agregar estas reglas al archivo forms.css */
+
+/* Contenedor de formulario centrado */
+.centered-form {
+    -fx-alignment: CENTER;
+    -fx-max-width: 800px;
+}
+
+/* Estilo para valores de formulario */
+.form-value {
+    -fx-font-size: 14px;
+    -fx-text-fill: -dark-gray;
+    -fx-padding: 8 12;
+    -fx-background-color: -light-gray;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1;
+    -fx-min-width: 250px;
+    -fx-max-width: Infinity;
+}
+
+/* Estilo para áreas de texto */
+.form-textarea {
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1;
+    -fx-padding: 8 12;
+    -fx-min-width: 250px;
+    -fx-pref-height: 100px;
+    -fx-max-width: Infinity;
+}
+
+.form-textarea:focused {
+    -fx-border-color: -accent-color;
+    -fx-border-width: 1.5;
+}
+
+/* Contenedor de botones */
+.button-container {
+    -fx-padding: 20 0 0 0;
+}
+
+/* Ajustes para GridPane */
+.form-grid {
+    -fx-hgap: 15;
+    -fx-vgap: 15;
+    -fx-padding: 20;
+}
+
+.centered-form {
+    -fx-alignment: CENTER;
+    -fx-max-width: 800px;
+}

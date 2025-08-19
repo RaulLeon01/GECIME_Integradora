@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/forms.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.integradora.ModificarInfoEmpleadoController">
+
+    <top>
+        <Label alignment="CENTER" maxWidth="Infinity" prefHeight="60" styleClass="header-label" text="SISTEMA GESTOR DE CITAS MÉDICAS | GECIME" />
+    </top>
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="16" styleClass="padded-container">
+            <Label styleClass="title-label" text="Modificar Información del Personal" textAlignment="CENTER" />
+            <padding>
+                <Insets bottom="20" left="30" right="30" top="20" />
+            </padding>
+
+            <!-- Cédula profesional (EDITABLE) -->
+            <Label styleClass="form-label" text="Cédula profesional:" />
+            <TextField fx:id="cedulaField" maxWidth="320" promptText="Ingrese cédula profesional" styleClass="form-textfield" />
+
+            <!-- Nombre -->
+            <Label styleClass="form-label" text="Nombre:" />
+            <TextField fx:id="nombreField" maxWidth="320" promptText="Ingrese nuevo nombre" styleClass="form-textfield" />
+
+            <!-- Especialidad -->
+            <Label styleClass="form-label" text="Especialidad:" />
+            <TextField fx:id="especialidadField" maxWidth="320" promptText="Ej. Medicina Interna" styleClass="form-textfield" />
+
+            <!-- Teléfono (se guardará en CUENTA más adelante) -->
+            <Label styleClass="form-label" text="Teléfono:" />
+            <TextField fx:id="telefonoField" maxWidth="320" promptText="10 dígitos" styleClass="form-textfield" />
+
+            <!-- Consultorio -->
+            <Label styleClass="form-label" text="Consultorio:" />
+            <ComboBox fx:id="consultorioCombo" maxWidth="320" promptText="Seleccione consultorio" styleClass="form-textfield" />
+
+            <!-- Horario de trabajo -->
+            <Label styleClass="form-label" text="Horario de trabajo:" />
+            <GridPane hgap="10" maxWidth="320" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                </columnConstraints>
+
+                <Label styleClass="form-label" text="Inicio (HH:mm)" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="horaInicioField" maxWidth="140" promptText="08:00" styleClass="form-textfield" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                <Label styleClass="form-label" text="Fin (HH:mm)" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <TextField fx:id="horaFinField" maxWidth="140" promptText="16:00" styleClass="form-textfield" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+
+            <HBox alignment="CENTER" spacing="20">
+                <Button onAction="#onCancelarClick" styleClass="cancel-button" text="Cancelar" />
+                <Button onAction="#onGuardarClick" styleClass="primary-button" text="Guardar" />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

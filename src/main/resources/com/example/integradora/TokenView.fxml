@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/forms.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.integradora.IngresarTokenController">
+
+    <!-- Top bar -->
+    <top>
+        <Label alignment="CENTER" maxWidth="Infinity" prefHeight="80" styleClass="header-label" text="SISTEMA GESTOR DE CITAS MÉDICAS | GECIME - Recuperar Contraseña" />
+    </top>
+
+    <!-- Center content -->
+    <center>
+        <VBox alignment="CENTER" styleClass="spaced-container padded-container" stylesheets="@../styles/forms.css">
+            <Label styleClass="title-label" text="Restablecer Contraseña" />
+            <Label styleClass="subtitle-label" text="Ingrese el token enviado a su correo" />
+
+            <VBox alignment="CENTER" spacing="15" styleClass="form-container">
+                <TextField fx:id="tokenField" promptText="Ingrese el token" styleClass="form-textfield" />
+
+                <Label styleClass="form-label" text="Ingrese su nueva contraseña" />
+                <PasswordField fx:id="nuevaContrasenaField" promptText="Nueva contraseña" styleClass="form-textfield" />
+
+                <Label styleClass="form-label" text="Confirme su nueva contraseña" />
+                <PasswordField fx:id="confirmarContrasenaField" promptText="Confirmar contraseña" styleClass="form-textfield" />
+
+                <!-- Botones -->
+                <HBox alignment="CENTER" spacing="20">
+                    <Button onAction="#onCancelarClick" styleClass="cancel-button" text="Cancelar" />
+                    <Button onAction="#onActualizarClick" styleClass="primary-button" text="Cambiar" />
+                </HBox>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

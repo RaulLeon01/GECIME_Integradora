@@ -1,0 +1,184 @@
+/* Variables de color */
+.root {
+    -header-color: #2F4F76;
+    -menu-color: #00A28A;
+    -accent-color: #3A7CA5;
+    -light-gray: #F5F5F5;
+    -medium-gray: #CCCCCC;
+    -dark-text: #333333;
+    -error-red: #D32F2F;
+    -white: #FFFFFF;
+    -highlight-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Barra superior */
+.header-label {
+    -fx-background-color: -header-color;
+    -fx-text-fill: -white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 20;
+    -fx-alignment: center;
+}
+
+.logout-button {
+    -fx-background-color: -error-red;
+    -fx-text-fill: -white;
+    -fx-font-weight: bold;
+    -fx-padding: 5 15;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.logout-button:hover {
+    -fx-background-color: derive(-error-red, -10%);
+}
+
+.side-menu {
+    -fx-background-color: -menu-color;
+    -fx-padding: 20 15 20 15;
+}
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: -white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 15;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-alignment: CENTER_LEFT;
+    -fx-cursor: hand;
+}
+
+.menu-button:hover {
+    -fx-background-color: -highlight-color;
+}
+
+.active-menu-button {
+    -fx-background-color: -highlight-color;
+    -fx-border-color: -white;
+    -fx-border-width: 0 0 0 3px;
+    -fx-font-weight: bolder;
+}
+
+/* Contenido principal */
+.content-box {
+    -fx-background-color: -white;
+    -fx-padding: 20;
+}
+
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -header-color;
+    -fx-padding: 10 0 20 0;
+}
+
+/* Tabla de historial corregida */
+.historial-table {
+    -fx-pref-height: 400;
+    -fx-background-color: -white;
+    -fx-border-color: -medium-gray;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+.historial-table .column-header-background {
+    -fx-background-color: -light-gray; /* Cambio: Fondo de encabezado gris claro */
+    -fx-border-radius: 5 5 0 0;
+}
+
+.historial-table .column-header,
+.historial-table .column-header .label {
+    -fx-text-fill: -dark-text; /* Cambio: Texto de encabezado oscuro */
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER; /* Cambio: Alineación del texto al centro */
+    -fx-background-color: transparent;
+}
+
+.historial-table .table-cell {
+    -fx-text-fill: -dark-text;
+    -fx-padding: 8 10;
+    -fx-border-color: transparent;
+}
+
+/* Colores de fila corregidos y consistentes */
+.historial-table .table-row-cell:odd {
+    -fx-background-color: -light-gray; /* Filas impares gris claro */
+}
+
+.historial-table .table-row-cell:even {
+    -fx-background-color: -white; /* Filas pares blancas */
+}
+
+.historial-table .table-row-cell:selected {
+    -fx-background-color: -accent-color;
+    -fx-text-fill: -white;
+}
+
+/* Botones de acción */
+.button-container {
+    -fx-padding: 20 0 0 0;
+}
+
+.secondary-button {
+    -fx-background-color: -accent-color;
+    -fx-text-fill: -white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 20;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: derive(-accent-color, -10%);
+}
+
+/* Scrollbar */
+.historial-table .scroll-bar:horizontal,
+.historial-table .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.historial-table .scroll-bar .thumb {
+    -fx-background-color: derive(-header-color, 50%);
+    -fx-background-radius: 5;
+}
+
+.historial-table {
+    -fx-column-resize-policy: FIT_WIDTH; /* Ajusta columnas al ancho */
+}
+
+/* --- Botón Cerrar Sesión (único cambio) --- */
+.logout-button {
+    -fx-background-color: #E74C3C;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 15 10 15;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.logout-button:hover {
+    -fx-background-color: #C0392B;
+}
+
+.logout-button:pressed {
+    -fx-background-color: #A93226;
+}
+
+/* Solución para centrar el texto en celdas */
+.historial-table .table-cell {
+    -fx-text-fill: -dark-text;
+    -fx-padding: 8 10;
+    -fx-border-color: transparent;
+    -fx-alignment: CENTER;
+}
+
+/* Estilo para centrar el texto en columnas específicas */
+.table-column {
+    -fx-alignment: CENTER;
+}

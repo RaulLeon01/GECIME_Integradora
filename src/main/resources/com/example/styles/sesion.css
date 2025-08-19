@@ -1,0 +1,182 @@
+/* Estilos generales */
+.root {
+    -fx-background-color: white;
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Encabezado */
+.header-label {
+    -fx-alignment: CENTER;
+    -fx-max-width: Infinity;
+    -fx-pref-height: 100;
+    -fx-background-color: #2F4F76;
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-padding: 30;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5);
+}
+
+/* Contenedor principal */
+.login-container {
+    -fx-alignment: TOP_CENTER;
+    -fx-fill-width: true;
+    -fx-spacing: 30;
+    -fx-padding: 40;
+}
+
+/* Título */
+.title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2F4F76;
+}
+
+/* Contenedor del logo */
+.logo-container {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 3);
+}
+
+/* Formulario */
+.form-container {
+    -fx-alignment: CENTER;
+    -fx-max-width: 400;
+    -fx-spacing: 15;
+    -fx-padding: 25;
+    -fx-background-color: #f8f8f8;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 3);
+}
+
+.form-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2F4F76;
+}
+
+.form-field {
+    -fx-pref-width: 300px;
+    -fx-padding: 8;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1;
+}
+
+.form-field:focused {
+    -fx-border-color: #4CB5A4;
+    -fx-border-width: 1.5;
+}
+
+/* Colores principales */
+.root {
+    -primary-color: #2F4F76;
+    -secondary-color: #4CB5A4;
+    -accent-color: #3A7CA5;
+    -light-gray: #F5F5F5;
+    -dark-gray: #333333;
+    -error-color: #D32F2F;
+    -success-color: #388E3C;
+}
+
+/* Estilos generales */
+.main-container {
+    -fx-padding: 30 20 40 20;
+    -fx-background-color: white;
+}
+
+/* Encabezado */
+.header-label {
+    -fx-background-color: -primary-color;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 20;
+    -fx-alignment: center;
+}
+
+/* Títulos */
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -primary-color;
+}
+
+/* Formulario */
+.form-container {
+    -fx-padding: 0 20 0 20;
+    -fx-min-width: 350;
+}
+
+.form-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: -dark-gray;
+    -fx-font-weight: bold;
+}
+
+.form-textfield {
+    -fx-pref-height: 35;
+    -fx-min-width: 300;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1;
+    -fx-padding: 5 10 5 10;
+}
+
+.form-textfield:focused {
+    -fx-border-color: -accent-color;
+    -fx-border-width: 1.5;
+}
+
+/* Botones */
+.primary-button {
+    -fx-background-color: -secondary-color;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 30 10 30;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #3CA492;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #2D8C7A;
+}
+
+/* Hipervínculos */
+.hyperlink {
+    -fx-text-fill: -accent-color;
+    -fx-font-size: 13px;
+    -fx-underline: false;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: -primary-color;
+    -fx-underline: true;
+}
+
+/* Texto secundario */
+.secondary-text {
+    -fx-text-fill: -dark-gray;
+    -fx-font-size: 13px;
+}
+
+.logo-image {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 5);
+    -fx-transition: all 0.8s ease; /* Para animación hover opcional */
+}
+
+/* Opcional: Efecto hover para dar interactividad */
+.logo-image:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 8, 0, 0, 8);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}

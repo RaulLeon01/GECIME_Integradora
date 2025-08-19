@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Integradora">
+    <output-path>$PROJECT_DIR$/out/artifacts/Integradora</output-path>
+    <root id="root">
+      <element id="archive" name="Integradora.jar">
+        <element id="module-output" name="Integradora" />
+      </element>
+    </root>
+  </artifact>
+</component>

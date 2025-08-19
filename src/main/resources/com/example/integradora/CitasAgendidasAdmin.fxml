@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/citasAgendadasAdmin.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.integradora.CitasAgendadasAdminController">
+
+    <!-- Encabezado -->
+    <top>
+        <Label alignment="CENTER" maxWidth="Infinity" prefHeight="80" styleClass="header-label" text="SISTEMA GESTOR DE CITAS MÉDICAS | GECIME" />
+    </top>
+
+    <!-- Cuerpo principal -->
+    <center>
+        <HBox alignment="TOP_LEFT" fillHeight="true" spacing="0" stylesheets="@../styles/citasAgendadasAdmin.css">
+
+            <!-- Menú lateral -->
+            <VBox prefWidth="160" spacing="10" styleClass="side-menu">
+                <padding>
+                    <Insets bottom="20" left="15" right="15" top="30" />
+                </padding>
+
+                <Button fx:id="btnPerfil" onAction="#irAVistaPerfil" styleClass="menu-button" text="Perfil" />
+                <Button fx:id="btnAgendadas" onAction="#irAVistaAgendadas" styleClass="menu-button" text="Citas  &#13;&#10;Agendadas" />
+                <Button onAction="#irAVistaHistorial" styleClass="menu-button" text="Historial" />
+                <Button fx:id="btnAgendar" onAction="#irAVistaAgendar" styleClass="menu-button" text="Agendar" />
+                <Button fx:id="btnPacientes" onAction="#irAVistaPacientes" styleClass="menu-button" text="Pacientes" />
+                <Button fx:id="btnDoctores" onAction="#irAVistaDoctores" styleClass="menu-button" text="Doctores" />
+                <Button onAction="#irAVistaConsultorios" styleClass="menu-button" text="Consultorios" />
+                <Pane prefHeight="200.0" prefWidth="200.0" />
+                <Button fx:id="btnCerrarSesion" onAction="#cerrarSesion" styleClass="logout-button" text="Cerrar sesión" />
+            </VBox>
+
+            <!-- Tabla -->
+            <VBox alignment="TOP_CENTER" spacing="20" styleClass="content-box" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                <padding>
+                    <Insets bottom="30" left="30" right="30" top="30" />
+                </padding>
+
+                <Label styleClass="section-title" text="Citas Agendadas" />
+
+                <TableView fx:id="tablaCitas" styleClass="historial-table" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                    <columns>
+                        <TableColumn fx:id="colMatricula" styleClass="table-column" text="Matrícula" />
+                        <TableColumn fx:id="colNombre" styleClass="table-column" text="Nombre" />
+                        <TableColumn fx:id="colDoctor" styleClass="table-column" text="Doctor" />
+                        <TableColumn fx:id="colFecha" styleClass="table-column" text="Fecha" />
+                        <TableColumn fx:id="colHora" styleClass="table-column" text="Hora" />
+                        <TableColumn fx:id="colMalestar" styleClass="table-column" text="Malestar" />
+                    </columns>
+                </TableView>
+
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

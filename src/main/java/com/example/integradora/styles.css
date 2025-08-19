@@ -1,0 +1,16 @@
+.menu-button {
+    -fx-background-color: #00A28A;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-pref-width: 110px;
+    -fx-pref-height: 30px;
+    -fx-background-radius: 5px;
+}
+
+.menu-button:hover {
+    -fx-background-color: #009077;
+}
+
+.menu-button:pressed {
+    -fx-background-color: #00735D;
+}

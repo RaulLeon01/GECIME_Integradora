@@ -1,0 +1,194 @@
+/* Variables de color */
+.root {
+    -header-color: #2F4F76;
+    -menu-color: #00A28A;
+    -accent-color: #3A7CA5;
+    -light-gray: #F5F5F5;
+    -medium-gray: #CCCCCC;
+    -dark-text: #333333;
+    -error-red: #D32F2F;
+    -white: #FFFFFF;
+    -highlight-color: rgba(255, 255, 255, 0.3);
+    -search-blue: #2196F3;
+}
+
+/* Barra superior */
+.header-label {
+    -fx-background-color: -header-color;
+    -fx-text-fill: -white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 20;
+    -fx-alignment: center;
+}
+
+/* Menú lateral */
+.side-menu {
+    -fx-background-color: -menu-color;
+    -fx-padding: 20 15 20 15;
+}
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: -white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 15;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-alignment: CENTER_LEFT;
+    -fx-cursor: hand;
+}
+
+.menu-button:hover {
+    -fx-background-color: -highlight-color;
+}
+
+.active-menu-button {
+    -fx-background-color: -highlight-color;
+    -fx-border-color: -white;
+    -fx-border-width: 0 0 0 3px;
+    -fx-font-weight: bolder;
+}
+
+/* --- Botón Cerrar Sesión (único cambio) --- */
+.logout-button {
+    -fx-background-color: #E74C3C;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 15 10 15;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.logout-button:hover {
+    -fx-background-color: #C0392B;
+}
+
+.logout-button:pressed {
+    -fx-background-color: #A93226;
+}
+
+/* Contenido principal */
+.content-box {
+    -fx-background-color: -white;
+    -fx-padding: 20;
+}
+
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -header-color;
+    -fx-padding: 10 0 20 0;
+}
+
+/* Barra de búsqueda */
+.search-box {
+    -fx-padding: 0 0 20 0;
+}
+
+.search-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: -header-color;
+    -fx-font-size: 14px;
+}
+
+.search-field {
+    -fx-pref-width: 200px;
+    -fx-padding: 5 10;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: -medium-gray;
+    -fx-border-width: 1;
+}
+
+.search-button {
+    -fx-background-color: -search-blue;
+    -fx-text-fill: -white;
+    -fx-font-weight: bold;
+    -fx-padding: 5 15;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.search-button:hover {
+    -fx-background-color: derive(-search-blue, -10%);
+}
+
+/* Tabla de historial */
+.historial-table {
+    -fx-pref-height: 400;
+    -fx-background-color: -white;
+    -fx-border-color: -medium-gray;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+.historial-table .column-header-background {
+    -fx-background-color: -light-gray;
+    -fx-border-radius: 5 5 0 0;
+}
+
+.historial-table .column-header,
+.historial-table .column-header .label {
+    -fx-text-fill: -dark-text;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-background-color: transparent;
+}
+
+.historial-table .table-cell {
+    -fx-text-fill: -dark-text;
+    -fx-padding: 8 10;
+    -fx-border-color: transparent;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Solución para centrar el texto en celdas */
+.historial-table .table-cell {
+    -fx-text-fill: -dark-text;
+    -fx-padding: 8 10;
+    -fx-border-color: transparent;
+    -fx-alignment: CENTER;
+}
+
+/* Estilo para centrar el texto en columnas específicas */
+.table-column {
+    -fx-alignment: CENTER;
+}
+
+/* Colores de fila alternados */
+.historial-table .table-row-cell:odd {
+    -fx-background-color: -light-gray;
+}
+
+.historial-table .table-row-cell:even {
+    -fx-background-color: -white;
+}
+
+.historial-table .table-row-cell:selected {
+    -fx-background-color: -accent-color;
+    -fx-text-fill: -white;
+}
+
+/* Scrollbar */
+.historial-table .scroll-bar:horizontal,
+.historial-table .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.historial-table .scroll-bar .thumb {
+    -fx-background-color: derive(-header-color, 50%);
+    -fx-background-radius: 5;
+}
+
+/* Estilo para tooltips */
+.tooltip {
+    -fx-background-color: -header-color;
+    -fx-text-fill: -white;
+    -fx-font-size: 12px;
+    -fx-padding: 5;
+    -fx-background-radius: 5;
+}
